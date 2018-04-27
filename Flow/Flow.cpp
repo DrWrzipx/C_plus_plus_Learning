@@ -6,15 +6,15 @@ int main()
 	int i;
 	char f = 'a';
 	bool keepgoing = true;
-	int answer;
+	char answer;
 
 	for(int loop = 0; loop < 10; loop++)
 	{
-		//keepgoing = true;
+		keepgoing = true;
 
 		std::cout << loop << " " << std::endl;
 
-		while(keepgoing == true)
+		while(keepgoing)
 		{
 
 			std::cout << "Please insert first number" << std::endl;
@@ -38,11 +38,13 @@ int main()
 				std::cout << "First and second numbers are equal." << std::endl;
 			}
 
-			std::cout << "Compare another ? 0 for no: ";
+			std::cout << "Compare another ? Y / N: ";
 			std::cin >> answer;
 
-			if (answer == 0)
+			if (answer == 'N')
 				keepgoing = false;
+			else if (answer == 'Y')
+				keepgoing = true;
 			else
 				keepgoing = true;
 		}
